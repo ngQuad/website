@@ -96,6 +96,7 @@ export class AppComponent implements OnInit {
               duration: 4000,
               easing: 'swing',
               step: function () {
+                // @ts-ignore
                 $this.text(Math.floor(this.countNum));
               },
               complete: function () {
@@ -112,6 +113,7 @@ export class AppComponent implements OnInit {
 
   clSlickSlider() {
 
+    // @ts-ignore
     $('.clients').slick({
       arrows: false,
       dots: true,
@@ -128,6 +130,7 @@ export class AppComponent implements OnInit {
         settings: { slidesToShow: 2, slidesToScroll: 2 }
       }]
     });
+    // @ts-ignore
     $('.testimonials').slick({
       arrows: true,
       dots: false,
@@ -148,6 +151,7 @@ export class AppComponent implements OnInit {
 
     // @ts-ignore
     $('.smoothscroll').on('click', function (e) {
+      // @ts-ignore
       var target = this.hash, $target = $(target);
       e.preventDefault();
       e.stopPropagation();
@@ -168,15 +172,17 @@ export class AppComponent implements OnInit {
     });
   };
 
-  clPhotoswipe () {
-    var items = [], $pswp = $('.pswp')[0], $folioItems = $('.item-folio');
+  clPhotoswipe() {
+    // @ts-ignore
+    const items = [], $pswp = $('.pswp')[0], $folioItems = $('.item-folio');
     $folioItems.each(function (i) {
-      var $folio = $(this), $thumbLink = $folio.find('.thumb-link'), $title = $folio.find('.item-folio__title'),
+      const $folio = $(this), $thumbLink = $folio.find('.thumb-link'), $title = $folio.find('.item-folio__title'),
         $caption = $folio.find('.item-folio__caption'), $titleText = '<h4>' + $.trim($title.html()) + '</h4>',
         $captionText = $.trim($caption.html()), $href = $thumbLink.attr('href'),
         $size = $thumbLink.data('size').split('x'), $width = $size[0], $height = $size[1];
-      var item = {src: $href, w: $width, h: $height}
+      const item = { src: $href, w: $width, h: $height };
       if ($caption.length > 0) {
+        // @ts-ignore
         item.title = $.trim($titleText + $captionText);
       }
       items.push(item);
@@ -184,8 +190,9 @@ export class AppComponent implements OnInit {
     $folioItems.each(function (i) {
       $(this).on('click', function (e) {
         e.preventDefault();
-        var options = {index: i, showHideOpacity: true}
-        var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
+        const options = { index: i, showHideOpacity: true };
+        // @ts-ignore
+        const lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
         lightBox.init();
       });
     });

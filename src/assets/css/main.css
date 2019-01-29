@@ -2805,6 +2805,10 @@ html.no-csstransitions .home-content__main {
   margin-bottom: 4.8rem
 }
 
+.__cf_email__ {
+  color: #fff;
+}
+
 .contact-social {
   list-style: none;
   display: inline-block;

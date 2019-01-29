@@ -30,10 +30,9 @@
               "src/styles.css"
             ],
             "scripts": [
-              "../assets/js/email-decode.min.js",
-              "../assets/js/jquery-3.2.1.min.js",
-              "../assets/js/modernizr.js",
-              "../assets/js/plugins.js"
+              "src/assets/js/jquery-3.2.1.min.js",
+              "src/assets/js/modernizr.js",
+              "src/assets/js/plugins.js"
             ]
           },
           "configurations": {
