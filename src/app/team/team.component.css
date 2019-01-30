@@ -10,7 +10,7 @@ section .section-title {
 }
 
 #team .card {
-  border: 1px solid #39b54a;
+  border: 5px solid #fff;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -124,9 +124,10 @@ section .section-title {
   width: 120px;
   height: 120px;
   border-radius: 50%;
+  border: 5px solid #39b54a;
 }
 
 .plus-circle {
-  font-size: 4rem;
-  color: #39b54a;
+  font-size: 2rem;
+  color: #fff;
 }

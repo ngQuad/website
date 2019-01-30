@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { emailValidator } from './helpers/email.helper';
+import { IEmail } from './interfaces/email.interface';
+import { AppService } from './services/app.service';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +11,11 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 
   currentYear: number;
+  emailValidator = emailValidator;
+
+  constructor(private readonly appService: AppService) {
+
+  }
 
   ngOnInit() {
 
@@ -202,4 +210,26 @@ export class AppComponent implements OnInit {
     // @ts-ignore
     AOS.init({ offset: 200, duration: 600, easing: 'ease-in-sine', delay: 300, once: true, disable: 'mobile' });
   };
+
+  sendEmail(contactForm: IEmail) {
+    const sLoader = $('.submit-loader');
+    const messageWarning = $('.message-warning');
+
+    sLoader.slideDown("slow");
+
+    const emailData = {
+      ...contactForm,
+      body: `A new contact has been made from our website,
+      \n Name: ${contactForm.name} ,
+      \n Email: ${contactForm.email},
+      \n Message: ${contactForm.body}`
+    };
+
+    this.appService.sendEmail(emailData).subscribe(res => {
+      sLoader.slideUp("slow");
+      messageWarning.fadeOut();
+      $('#contactForm').fadeOut();
+      $('.message-success').fadeIn();
+    });
+  }
 }
