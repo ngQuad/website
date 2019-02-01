@@ -6,6 +6,8 @@ import { config } from './config/config';
 import * as mapboxgl from 'mapbox-gl';
 import { defaultMapCenter, iGeoJson } from './helpers/locations.helper';
 import { IGeoJson } from './interfaces/location.interface';
+import { ISocial } from './interfaces/social.interface';
+import { socials } from './helpers/social.helper';
 
 
 @Component({
@@ -19,9 +21,9 @@ export class AppComponent implements OnInit, AfterViewInit {
   emailValidator = emailValidator;
   iGeoJson: IGeoJson = iGeoJson;
   map: object;
+  socials: ISocial[] = socials;
 
   constructor(private readonly appService: AppService) {
-
   }
 
   ngOnInit() {

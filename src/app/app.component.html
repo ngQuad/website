@@ -14,26 +14,15 @@
         <li><a class="smoothscroll" href="#services" title="services">Services</a></li>
         <li><a class="smoothscroll" href="#works" title="works">Works</a></li>
         <li><a class="smoothscroll" href="#team" title="team">Team</a></li>
+        <li><a class="smoothscroll" href="#locations" title="locations">Locations</a></li>
         <li><a class="smoothscroll" href="#clients" title="clients">Clients</a></li>
         <li><a class="smoothscroll" href="#contact" title="contact">Contact</a></li>
       </ul>
       <p>Perspiciatis hic praesentium nesciunt. Et neque a dolorum <a href='#0'>voluptatem</a> porro iusto sequi
         veritatis libero enim. Iusto id suscipit veritatis neque reprehenderit.</p>
       <ul class="header-nav__social">
-        <li>
-          <a href="#"><i class="fa fa-facebook"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="fa fa-twitter"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="fa fa-instagram"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="fa fa-behance"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="fa fa-dribbble"></i></a>
+        <li *ngFor="let social of socials">
+          <a [href]="social?.url" target="_blank"><i class="fa {{social?.icon}}" aria-hidden="true"></i></a>
         </li>
       </ul>
     </div>
@@ -75,20 +64,11 @@
     <div class="home-content__line"></div>
   </div>
   <ul class="home-social">
-    <li>
-      <a href="#0"><i class="fa fa-facebook" aria-hidden="true"></i><span>Facebook</span></a>
-    </li>
-    <li>
-      <a href="#0"><i class="fa fa-twitter" aria-hidden="true"></i><span>Twiiter</span></a>
-    </li>
-    <li>
-      <a href="#0"><i class="fa fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
-    </li>
-    <li>
-      <a href="#0"><i class="fa fa-behance" aria-hidden="true"></i><span>Behance</span></a>
-    </li>
-    <li>
-      <a href="#0"><i class="fa fa-dribbble" aria-hidden="true"></i><span>Dribbble</span></a>
+    <li *ngFor="let social of socials">
+      <a [href]="social?.url" target="_blank">
+        <i class="fa {{social?.icon}}" aria-hidden="true"></i>
+        <span>{{social?.title}}</span>
+      </a>
     </li>
   </ul>
 
@@ -394,13 +374,13 @@
 
 <ngQuad-team></ngQuad-team>
 
-<section id="locations" class="s-home" data-parallax="scroll"
+<section id="locations" class="s-home target-section" data-parallax="scroll"
          data-image-src="../../assets/images/backgrounds/background.png" data-natural-width=3000
          data-natural-height=2000 data-position-y=center>
 
   <div class="row section-header" data-aos="fade-up">
     <div class="col-full">
-      <h3 class="subhead">Our Locations</h3>
+      <h3 class="section-title h1 green">Our Locations</h3>
       <h1 class="display-2 display-2--light">We come from different cities, check them out freely</h1>
     </div>
   </div>
@@ -534,9 +514,9 @@
         <div class="cinfo">
           <h5>Where to Find Us</h5>
           <p>
-            1600 Amphitheatre Parkway<br>
-            Mountain View, CA<br>
-            94043 US
+            Pale<br>
+            Republic of Srpska, Bosnia and Herzegovina<br>
+            71420 BIH
           </p>
         </div>
         <div class="cinfo">
@@ -555,20 +535,8 @@
           </p>
         </div>
         <ul class="contact-social">
-          <li>
-            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+          <li *ngFor="let social of socials">
+            <a [href]="social?.url" target="_blank"><i class="fa {{social?.icon}}" aria-hidden="true"></i></a>
           </li>
         </ul>
       </div>
