@@ -1,13 +1,16 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { emailValidator } from './helpers/email.helper';
-import { IEmail } from './interfaces/email.interface';
-import { AppService } from './services/app.service';
-import { config } from './config/config';
 import * as mapboxgl from 'mapbox-gl';
-import { defaultMapCenter, iGeoJson } from './helpers/locations.helper';
+
 import { IGeoJson } from './interfaces/location.interface';
+import { IEmail } from './interfaces/email.interface';
 import { ISocial } from './interfaces/social.interface';
+
+import { config } from './config/config';
+import { emailValidator } from './helpers/email.helper';
 import { socials } from './helpers/social.helper';
+import { defaultMapCenter, iGeoJson } from './helpers/locations.helper';
+
+import { AppService } from './services/app.service';
 
 
 @Component({
