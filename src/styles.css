@@ -5,3 +5,31 @@
 @import "assets/css/vendor.css";
 @import "assets/css/micons/micons.css";
 @import "assets/css/font-awesome/css/font-awesome.min.css";
+
+/*Begin map custom css*/
+
+.marker {
+  background-image: url('./assets/images/rocket.svg');
+  background-color: #39b54a;
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.mapboxgl-ctrl-logo, .mapboxgl-ctrl, .mapboxgl-ctrl-attrib-inner {
+  display: none !important;
+}
+
+/*End map custom css*/
+

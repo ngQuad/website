@@ -1,0 +1,17 @@
+<div class='sidebar' data-aos="fade-up">
+  <div class='heading'>
+    <h1 (click)="onMapReset()">Our locations</h1>
+  </div>
+  <div id='listings' class='listings'>
+    <ng-container *ngFor="let location of iGeoJson.features; let i = index">
+      <ngQuad-location-item
+        [city]="location?.properties?.city"
+        [state]="location?.properties?.state"
+        [isLast]="i === (iGeoJson?.features?.length - 1)"
+        [active]="location?.properties?.active"
+        (click)="onItemLocationClicked(location)">
+      </ngQuad-location-item>
+    </ng-container>
+  </div>
+</div>
+<div id='mapgl' [style.height.px]="height" class='map' data-aos="fade-up"></div>

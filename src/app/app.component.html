@@ -1,7 +1,7 @@
 <header class="s-header">
   <div class="header-logo">
     <a class="site-logo">
-      <img src="../assets/../assets/images/webngquad.png" alt="Homepage">
+      <img src="../assets/images/webngquad.png" alt="Homepage">
     </a>
   </div>
   <nav class="header-nav">
@@ -45,7 +45,7 @@
 </header>
 
 <section id="home" class="s-home target-section" data-parallax="scroll"
-         data-image-src="../assets/../assets/images/backgrounds/background-2.jpg"
+         data-image-src="../assets/images/backgrounds/background-2.jpg"
          data-natural-width=3000 data-natural-height=2000 data-position-y=center>
   <div class="overlay"></div>
   <div class="shadow-overlay"></div>
@@ -394,6 +394,27 @@
 
 <ngQuad-team></ngQuad-team>
 
+<section id="locations" class="s-home" data-parallax="scroll"
+         data-image-src="../../assets/images/backgrounds/background.png" data-natural-width=3000
+         data-natural-height=2000 data-position-y=center>
+
+  <div class="row section-header" data-aos="fade-up">
+    <div class="col-full">
+      <h3 class="subhead">Our Locations</h3>
+      <h1 class="display-2 display-2--light">We come from different cities, check them out freely</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <map-box
+      [iGeoJson]="iGeoJson"
+      (mapReset)="onMapReset()"
+      (itemLocationClick)="onItemLocationClicked($event)"
+    ></map-box>
+  </div>
+
+</section>
+
 <section id="clients" class="s-clients">
   <div class="row section-header" data-aos="fade-up">
     <div class="col-full">
@@ -405,14 +426,14 @@
   <div class="row clients-outer" data-aos="fade-up">
     <div class="col-full">
       <div class="clients">
-        <a href="#0" title="" class="clients__slide"><img src="../assets/../assets/images/clients/apple.png"/></a>
-        <a href="#0" title="" class="clients__slide"><img src="../assets/../assets/images/clients/atom.png"/></a>
-        <a href="#0" title="" class="clients__slide"><img src="../assets/../assets/images/clients/blackberry.png"/></a>
-        <a href="#0" title="" class="clients__slide"><img src="../assets/../assets/images/clients/dropbox.png"/></a>
-        <a href="#0" title="" class="clients__slide"><img src="../assets/../assets/images/clients/envato.png"/></a>
-        <a href="#0" title="" class="clients__slide"><img src="../assets/../assets/images/clients/firefox.png"/></a>
-        <a href="#0" title="" class="clients__slide"><img src="../assets/../assets/images/clients/joomla.png"/></a>
-        <a href="#0" title="" class="clients__slide"><img src="../assets/../assets/images/clients/magento.png"/></a>
+        <a href="#0" title="" class="clients__slide"><img src="../assets/images/clients/apple.png"/></a>
+        <a href="#0" title="" class="clients__slide"><img src="../assets/images/clients/atom.png"/></a>
+        <a href="#0" title="" class="clients__slide"><img src="../assets/images/clients/blackberry.png"/></a>
+        <a href="#0" title="" class="clients__slide"><img src="../assets/images/clients/dropbox.png"/></a>
+        <a href="#0" title="" class="clients__slide"><img src="../assets/images/clients/envato.png"/></a>
+        <a href="#0" title="" class="clients__slide"><img src="../assets/images/clients/firefox.png"/></a>
+        <a href="#0" title="" class="clients__slide"><img src="../assets/images/clients/joomla.png"/></a>
+        <a href="#0" title="" class="clients__slide"><img src="../assets/images/clients/magento.png"/></a>
       </div>
     </div>
   </div>
@@ -424,7 +445,7 @@
             Laudantium quia consequatur molestias delectus culpa facere hic dolores aperiam. Accusantium quos qui
             praesentium corpori.
             Excepturi nam cupiditate culpa doloremque deleniti repellat.</p>
-          <img src="../assets/../assets/images/avatars/user-01.jpg" alt="Author image" class="testimonials__avatar">
+          <img src="../assets/images/avatars/user-01.jpg" alt="Author image" class="testimonials__avatar">
           <div class="testimonials__info">
             <span class="testimonials__name">Tim Cook</span>
             <span class="testimonials__pos">CEO, Apple</span>
@@ -434,7 +455,7 @@
           <p>Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi adipisci.
             Nisi eaque consequatur. Quasi voluptas eius distinctio. Atque eos maxime. Qui ipsam temporibus quisquam
             vel.</p>
-          <img src="../assets/../assets/images/avatars/user-05.jpg" alt="Author image" class="testimonials__avatar">
+          <img src="../assets/images/avatars/user-05.jpg" alt="Author image" class="testimonials__avatar">
           <div class="testimonials__info">
             <span class="testimonials__name">Sundar Pichai</span>
             <span class="testimonials__pos">CEO, Google</span>
@@ -444,7 +465,7 @@
           <p>Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt. Ducimus
             aut sed ipsam.
             Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas eius distinctio.</p>
-          <img src="../assets/../assets/images/avatars/user-02.jpg" alt="Author image" class="testimonials__avatar">
+          <img src="../assets/images/avatars/user-02.jpg" alt="Author image" class="testimonials__avatar">
           <div class="testimonials__info">
             <span class="testimonials__name">Satya Nadella</span>
             <span class="testimonials__pos">CEO, Microsoft</span>

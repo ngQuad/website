@@ -1,17 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { emailValidator } from './helpers/email.helper';
 import { IEmail } from './interfaces/email.interface';
 import { AppService } from './services/app.service';
+import { config } from './config/config';
+import * as mapboxgl from 'mapbox-gl';
+import { defaultMapCenter, iGeoJson } from './helpers/locations.helper';
+import { IGeoJson } from './interfaces/location.interface';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, AfterViewInit {
 
   currentYear: number;
   emailValidator = emailValidator;
+  iGeoJson: IGeoJson = iGeoJson;
+  map: object;
 
   constructor(private readonly appService: AppService) {
 
@@ -30,6 +37,10 @@ export class AppComponent implements OnInit {
     this.clAOS();
 
     this.currentYear = new Date().getFullYear();
+  }
+
+  ngAfterViewInit() {
+    this.initMap();
   }
 
   onMenuScrollDown(window) {
@@ -93,7 +104,7 @@ export class AppComponent implements OnInit {
       const oTop = $('#counter').offset().top - window.innerHeight;
       if (a == 0 && $(window).scrollTop() > oTop) {
         $('.stats__count').each(function () {
-          var $this = $(this),
+          const $this = $(this),
             countTo = $this.attr('data-count');
           $({
             countNum: $this.text()
@@ -160,7 +171,7 @@ export class AppComponent implements OnInit {
     // @ts-ignore
     $('.smoothscroll').on('click', function (e) {
       // @ts-ignore
-      var target = this.hash, $target = $(target);
+      const target = this.hash, $target = $(target);
       e.preventDefault();
       e.stopPropagation();
       $('html, body').stop().animate({ 'scrollTop': $target.offset().top }, 800, 'swing').promise().done(function () {
@@ -231,5 +242,88 @@ export class AppComponent implements OnInit {
       $('#contactForm').fadeOut();
       $('.message-success').fadeIn();
     });
+  }
+
+  initMap() {
+
+    mapboxgl.accessToken = config.mapGlToken;
+
+    const map = new mapboxgl.Map({
+      container: 'mapgl',
+      style: 'mapbox://styles/mapbox/dark-v9',
+      center: defaultMapCenter,
+      zoom: 6.09
+    });
+
+    this.map = map;
+
+    map.on('load', (e) => {
+
+      map.addSource('places', {
+        type: 'geojson',
+        data: this.iGeoJson
+      });
+
+      this.iGeoJson.features.forEach((marker) => {
+
+        const el = document.createElement('div');
+        el.className = 'marker';
+
+        new mapboxgl.Marker(el, { offset: [0, -23] })
+          .setLngLat(marker.geometry.coordinates)
+          .addTo(map);
+
+        el.addEventListener('click', (e) => {
+          this.flyToLocation(marker, map);
+        });
+      });
+    });
+  }
+
+  onMapReset() {
+
+    this.map.flyTo({
+      center: defaultMapCenter,
+      zoom: 6.09
+    });
+
+    this.markLocationActive(null);
+  }
+
+  onItemLocationClicked(location) {
+
+    this.flyToLocation(location, this.map);
+    this.markLocationActive(location);
+  }
+
+  flyToLocation(currentFeature, map) {
+
+    map.flyTo({
+      center: currentFeature.geometry.coordinates,
+      zoom: 15
+    });
+  }
+
+  markLocationActive(location: object) {
+
+    if (!location) {
+      return this.iGeoJson = iGeoJson;
+    }
+
+    const newIGeoJson = { ...this.iGeoJson };
+
+    this.iGeoJson = {
+      ...newIGeoJson,
+      features: newIGeoJson.features.map(feature => {
+
+        return {
+          ...feature,
+          properties: {
+            ...feature.properties,
+            active: location.properties.city === feature.properties.city
+          }
+        }
+      })
+    };
   }
 }

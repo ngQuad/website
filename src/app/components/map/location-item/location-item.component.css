@@ -1,0 +1,41 @@
+.title {
+  display: block;
+  color: #fff;
+  font-weight: 700;
+}
+
+.title:hover {
+  color: #39b54a;
+}
+
+.title small {
+  font-weight: 400;
+}
+
+.item {
+  display: block;
+  border-bottom: 1px solid #39b54a;
+  padding: 10px;
+  text-decoration: none;
+  opacity: 0.5;
+  background-color: transparent;
+  transition: opacity, background-color .5s ease-out;
+  -moz-transition: opacity, background-color .5s ease-out;
+  -webkit-transition: opacity, background-color .5s ease-out;
+  -o-transition: opacity, background-color .5s ease-out;
+}
+
+.item:hover {
+  opacity: 1;
+  cursor: pointer;
+  background-color: #191818;
+}
+
+.active {
+  opacity: 1;
+  background-color: #191818;
+}
+
+.no-border {
+  border-bottom: none;
+}
