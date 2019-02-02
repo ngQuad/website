@@ -23,7 +23,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   currentYear: number;
   emailValidator = emailValidator;
   iGeoJson: IGeoJson = iGeoJson;
-  map: object;
+  map: any;
   socials: ISocial[] = socials;
 
   constructor(private readonly appService: AppService) {
@@ -228,6 +228,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   };
 
   sendEmail(contactForm: IEmail) {
+
     const sLoader = $('.submit-loader');
     const messageWarning = $('.message-warning');
 
@@ -242,6 +243,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     };
 
     this.appService.sendEmail(emailData).subscribe(res => {
+
       sLoader.slideUp("slow");
       messageWarning.fadeOut();
       $('#contactForm').fadeOut();
@@ -309,7 +311,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     });
   }
 
-  markLocationActive(location: object) {
+  markLocationActive(location: any) {
 
     if (!location) {
       return this.iGeoJson = iGeoJson;

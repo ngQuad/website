@@ -482,23 +482,28 @@
       <h3 class="h6">Send Us A Message</h3>
       <form #contactForm="ngForm" id="contactForm">
         <div class="form-field form-group">
-          <input name="name" type="text" id="contactName" placeholder="Your Name" value="" minlength="2"
+          <label *ngIf="contactInput.value.length <= 2 && contactForm.controls['name']?.touched" id="contactName-error" class="error" for="contactName">This field is required, need more than 2 letters.</label>
+          <input #contactInput name="name" type="text" id="contactName" placeholder="Your Name" value="" minlength="2"
                  required aria-required="true" class="full-width form-control" ngModel>
         </div>
         <div class="form-field form-group">
+          <label *ngIf="!contactForm.controls['email']?.valid && contactForm.controls['email']?.touched" id="contactEmail-error" class="error" for="contactEmail">Enter valid email.</label>
           <input name="email" [pattern]="emailValidator" type="email" id="contactEmail" placeholder="Your Email"
                  value="" required aria-required="true" class="full-width form-control" ngModel>
         </div>
         <div class="form-field form-group">
-          <input name="subject" type="text" id="contactSubject" placeholder="Subject" value=""
+
+          <label *ngIf="!subject.value.length && contactForm.controls['subject']?.touched" id="contactSubject-error" class="error" for="contactSubject">This field is required.</label>
+          <input #subject name="subject" type="text" id="contactSubject" placeholder="Subject" value=""
                  class="full-width form-control" ngModel>
         </div>
         <div class="form-field form-group">
-            <textarea name="body" id="contactMessage" placeholder="Your Message" rows="10" cols="50"
+          <label *ngIf="body.value.length <= 10 && contactForm.controls['body']?.touched" id="contactMessage-error" class="error" for="contactMessage">Enter minimum of 10 letters.</label>
+          <textarea #body name="body" id="contactMessage" placeholder="Your Message" rows="10" cols="50"
                       required="" aria-required="true" class="full-width form-control" ngModel></textarea>
         </div>
         <div class="form-field">
-          <button [disabled]="!contactForm.valid" (click)="sendEmail(contactForm.value)"
+          <button [disabled]="!contactForm.valid" [ngClass]="{ 'disabled': !contactForm.valid}" (click)="sendEmail(contactForm.value)"
                   class="full-width btn--primary">
             Submit
           </button>
