@@ -3,7 +3,7 @@ import { ISocial } from './social.interface';
 export interface ITeamMember {
   name?: string;
   intro?: string;
-  joyIntro?: string;
+  role?: string;
   image?: string;
   description?: string;
   socials?: ISocial[]

@@ -1,8 +1,8 @@
 export const teamMembers = [
   {
     name: 'Miroslav',
-    intro: 'Full stack developer',
-    joyIntro: 'SOmething funny',
+    intro: 'Hello there I am miki.',
+    role: 'Team leader',
     image: 'miki',
     description: 'Working on multiple projects since 2013Working on multiple projects since 2013Working on multiple projects since 2013',
     socials: [
@@ -47,7 +47,7 @@ export const teamMembers = [
   {
     name: 'Miroslav',
     intro: 'Full stack developer',
-    joyIntro: 'SOmething funny',
+    role: 'SOmething funny',
     image: 'miki',
     description: 'Working on multiple projects since 2013Working on multiple projects since 2013Working on multiple projects since 2013',
     socials: [
@@ -92,7 +92,7 @@ export const teamMembers = [
   {
     name: 'Miroslav',
     intro: 'Full stack developer',
-    joyIntro: 'SOmething funny',
+    role: 'SOmething funny',
     image: 'miki',
     description: 'Working on multiple projects since 2013Working on multiple projects since 2013Working on multiple projects since 2013',
     socials: [
@@ -137,7 +137,7 @@ export const teamMembers = [
   {
     name: 'Miroslav',
     intro: 'Full stack developer',
-    joyIntro: 'SOmething funny',
+    role: 'SOmething funny',
     image: 'miki',
     description: 'Working on multiple projects since 2013Working on multiple projects since 2013Working on multiple projects since 2013',
     socials: [
@@ -182,7 +182,7 @@ export const teamMembers = [
   {
     name: 'Miroslav',
     intro: 'Full stack developer',
-    joyIntro: 'SOmething funny',
+    role: 'SOmething funny',
     image: 'miki',
     description: 'Working on multiple projects since 2013Working on multiple projects since 2013Working on multiple projects since 2013',
     socials: [
