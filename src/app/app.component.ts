@@ -3,13 +3,15 @@ import * as mapboxgl from 'mapbox-gl';
 
 import { IGeoJson } from './interfaces/location.interface';
 import { IEmail } from './interfaces/email.interface';
+import { ITeamMember } from './interfaces/team.interface';
 import { ISocial } from './interfaces/social.interface';
 
 import { config } from './config/config';
 import { emailValidator } from './helpers/email.helper';
+import { teamMembers } from './helpers/team.helper';
 import { socials } from './helpers/social.helper';
-import { defaultMapCenter, iGeoJson } from './helpers/locations.helper';
 
+import { defaultMapCenter, iGeoJson } from './helpers/locations.helper';
 import { AppService } from './services/app.service';
 
 
@@ -25,6 +27,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   iGeoJson: IGeoJson = iGeoJson;
   map: any;
   socials: ISocial[] = socials;
+  teamMembers: ITeamMember[] = teamMembers;
 
   constructor(private readonly appService: AppService) {
   }

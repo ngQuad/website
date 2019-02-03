@@ -4,27 +4,27 @@ export const socials: ISocial[] = [
   {
     title: 'Facebook',
     url: 'https://www.facebook.com/ngQuad',
-    icon: 'fa-facebook'
+    icon: 'facebook'
   },
   {
     title: 'Twitter',
     url: 'https://twitter.com/NgQuad',
-    icon: 'fa-twitter'
+    icon: 'twitter'
   },
   {
     title: 'Instagram',
     url: 'https://www.instagram.com/ngquad/',
-    icon: 'fa-instagram'
+    icon: 'instagram'
   },
   {
     title: 'GitHub',
     url: 'https://github.com/ngQuad',
-    icon: 'fa-github'
+    icon: 'github'
   },
   {
     title: 'Linkedin',
     url: 'https://www.linkedin.com/company/ngquad',
-    icon: 'fa-linkedin'
+    icon: 'linkedin'
   }
 ];
 

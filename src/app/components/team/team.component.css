@@ -121,10 +121,27 @@ section .section-title {
 }
 
 .frontside .card .card-body img {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   border: 5px solid #39b54a;
+}
+
+.backside .card .card-body img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #39b54a;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.backside .card .card-body > h4 {
+  margin-top: 0;
+}
+
+.backside .card .card-body > p {
+  margin-bottom: 0;
 }
 
 .plus-circle {

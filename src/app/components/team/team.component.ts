@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ITeamMember } from '../../interfaces/team.interface';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -8,4 +9,5 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 })
 export class TeamComponent {
 
+  @Input() teamMembers: ITeamMember[]
 }

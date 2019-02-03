@@ -5,231 +5,50 @@
   <div class="container">
     <h5 class="section-title h1">OUR TEAM</h5>
     <div class="row block-1-3 block-tab-full" data-aos="fade-up">
-      <div class="col-block" data-aos="fade-up">
-        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-          <div class="mainflip">
-            <div class="frontside">
-              <div class="card">
-                <div class="card-body text-center">
-                  <p><img class=" img-fluid"
-                          src="../../../assets/images/team/miki.JPG"
-                          alt="card image"></p>
-                  <h4 class="card-title">Miroslav</h4>
-                  <p class="card-text">This is basic card with image on top, title, description and button.</p>
-                  <a href="#" class="plus-circle"><i class="fa fa-superpowers"></i></a>
+      <ng-container *ngFor="let teamMember of teamMembers">
+        <div class="col-block" data-aos="fade-up">
+          <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+            <div class="mainflip">
+              <div class="frontside">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <p>
+                      <img class=" img-fluid"
+                           src="../../../assets/images/team/{{teamMember?.image}}.JPG"
+                           alt="card image">
+                    </p>
+                    <h4 class="card-title">{{teamMember?.name}}</h4>
+                    <p class="card-text">{{teamMember?.intro}}</p>
+                    <a class="plus-circle"><i class="fa fa-superpowers"></i></a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="backside">
-              <div class="card">
-                <div class="card-body text-center mt-4">
-                  <h4 class="card-title">Sunlimetech</h4>
-                  <p class="card-text">This is basic card with image on top, title, description and button.This is basic
-                    card with image on top, title, description and button.This is basic card with image on top, title,
-                    description and button.</p>
-                  <ul class="contact-social">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-block" data-aos="fade-up">
-        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-          <div class="mainflip">
-            <div class="frontside">
-              <div class="card">
-                <div class="card-body text-center">
-                  <p><img class=" img-fluid"
-                          src="../../../assets/images/team/miki.JPG"
-                          alt="card image"></p>
-                  <h4 class="card-title">Miroslav</h4>
-                  <p class="card-text">This is basic card with image on top, title, description and button.</p>
-                  <a href="#" class="plus-circle"><i class="fa fa-superpowers"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="backside">
-              <div class="card">
-                <div class="card-body text-center mt-4">
-                  <h4 class="card-title">Sunlimetech</h4>
-                  <p class="card-text">This is basic card with image on top, title, description and button.This is basic
-                    card with image on top, title, description and button.This is basic card with image on top, title,
-                    description and button.</p>
-                  <ul class="contact-social">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
+              <div class="backside">
+                <div class="card">
+                  <div class="card-body text-center mt-4">
+                    <p>
+                      <img class=" img-fluid"
+                           src="../../../assets/images/team/{{teamMember?.image}}-joy.JPG"
+                           alt="card image">
+                    </p>
+                    <h4 class="card-title">{{teamMember?.joyIntro}}</h4>
+                    <p class="card-text">{{teamMember?.description}}</p>
+                    <ul class="contact-social">
+                      <ng-container>
+                        <li *ngFor="let social of teamMember?.socials">
+                          <a href="{{social?.url}}" target="_blank">
+                            <i class="fa fa-{{social?.icon}}" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ng-container>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-block" data-aos="fade-up">
-        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-          <div class="mainflip">
-            <div class="frontside">
-              <div class="card">
-                <div class="card-body text-center">
-                  <p><img class=" img-fluid"
-                          src="../../../assets/images/team/miki.JPG"
-                          alt="card image"></p>
-                  <h4 class="card-title">Miroslav</h4>
-                  <p class="card-text">This is basic card with image on top, title, description and button.</p>
-                  <a href="#" class="plus-circle"><i class="fa fa-superpowers"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="backside">
-              <div class="card">
-                <div class="card-body text-center mt-4">
-                  <h4 class="card-title">Sunlimetech</h4>
-                  <p class="card-text">This is basic card with image on top, title, description and button.This is basic
-                    card with image on top, title, description and button.This is basic card with image on top, title,
-                    description and button.</p>
-                  <ul class="contact-social">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-block" data-aos="fade-up">
-        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-          <div class="mainflip">
-            <div class="frontside">
-              <div class="card">
-                <div class="card-body text-center">
-                  <p><img class=" img-fluid"
-                          src="../../../assets/images/team/miki.JPG"
-                          alt="card image"></p>
-                  <h4 class="card-title">Miroslav</h4>
-                  <p class="card-text">This is basic card with image on top, title, description and button.</p>
-                  <a href="#" class="plus-circle"><i class="fa fa-superpowers"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="backside">
-              <div class="card">
-                <div class="card-body text-center mt-4">
-                  <h4 class="card-title">Sunlimetech</h4>
-                  <p class="card-text">This is basic card with image on top, title, description and button.This is basic
-                    card with image on top, title, description and button.This is basic card with image on top, title,
-                    description and button.</p>
-                  <ul class="contact-social">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-block" data-aos="fade-up">
-        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-          <div class="mainflip">
-            <div class="frontside">
-              <div class="card">
-                <div class="card-body text-center">
-                  <p><img class=" img-fluid"
-                          src="../../../assets/images/team/miki.JPG"
-                          alt="card image"></p>
-                  <h4 class="card-title">Miroslav</h4>
-                  <p class="card-text">This is basic card with image on top, title, description and button.</p>
-                  <a href="#" class="plus-circle"><i class="fa fa-superpowers"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="backside">
-              <div class="card">
-                <div class="card-body text-center mt-4">
-                  <h4 class="card-title">Sunlimetech</h4>
-                  <p class="card-text">This is basic card with image on top, title, description and button.This is basic
-                    card with image on top, title, description and button.This is basic card with image on top, title,
-                    description and button.</p>
-                  <ul class="contact-social">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      </ng-container>
     </div>
   </div>
 </section>
