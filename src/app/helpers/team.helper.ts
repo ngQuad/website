@@ -20,7 +20,7 @@ export const teamMembers = [
       },
       {
         url: 'https://profiles.udacity.com/p/5245451044',
-        icon: 'university'
+        icon: 'magnet'
       },
       {
         url: 'https://medium.com/@miki995',
