@@ -19,10 +19,6 @@ export const teamMembers = [
         icon: 'linkedin'
       },
       {
-        url: 'https://profiles.udacity.com/p/5245451044',
-        icon: 'magnet'
-      },
-      {
         url: 'https://medium.com/@miki995',
         icon: 'medium'
       },

@@ -11,7 +11,7 @@ import { emailValidator } from './helpers/email.helper';
 import { teamMembers } from './helpers/team.helper';
 import { socials } from './helpers/social.helper';
 
-import { defaultMapCenter, iGeoJson } from './helpers/locations.helper';
+import { defaultMapCenter, defaultMapZoom, iGeoJson } from './helpers/locations.helper';
 import { AppService } from './services/app.service';
 
 
@@ -262,7 +262,7 @@ export class AppComponent implements OnInit, AfterViewInit {
       container: 'mapgl',
       style: 'mapbox://styles/mapbox/dark-v9',
       center: defaultMapCenter,
-      zoom: 6.09
+      zoom: defaultMapZoom
     });
 
     this.map = map;
@@ -294,7 +294,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
     this.map.flyTo({
       center: defaultMapCenter,
-      zoom: 6.09
+      zoom: defaultMapZoom
     });
 
     this.markLocationActive(null);

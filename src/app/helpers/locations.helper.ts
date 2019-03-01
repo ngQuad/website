@@ -71,7 +71,22 @@ export const iGeoJson = {
         "state": "Serbia"
       }
     },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.55747,
+          46.54245
+        ]
+      },
+      "properties": {
+        "city": "Târgu-Mureş",
+        "state": "Romania"
+      }
+    },
   ]
 };
 
-export const defaultMapCenter = [18.123694, 44.093374];
+export const defaultMapCenter = [21.123694, 45.093374];
+export const defaultMapZoom = 5.2;
