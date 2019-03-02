@@ -18,8 +18,7 @@
         <li><a class="smoothscroll" href="#clients" title="clients">Clients</a></li>
         <li><a class="smoothscroll" href="#contact" title="contact">Contact</a></li>
       </ul>
-      <p>Perspiciatis hic praesentium nesciunt. Et neque a dolorum <a href='#0'>voluptatem</a> porro iusto sequi
-        veritatis libero enim. Iusto id suscipit veritatis neque reprehenderit.</p>
+      <p>You can find us on social and professional networks bellow. Send us a message.</p>
       <ul class="header-nav__social">
         <li *ngFor="let social of socials">
           <a [href]="social?.url" target="_blank"><i class="fa fa-{{social?.icon}}" aria-hidden="true"></i></a>
@@ -74,43 +73,7 @@
 
 </section>
 
-<section id='about' class="s-about">
-  <div class="row section-header has-bottom-sep" data-aos="fade-up">
-    <div class="col-full">
-      <h3 class="subhead subhead--dark">Hello There</h3>
-      <h1 class="display-1 display-1--light">We Are ngQuad</h1>
-    </div>
-  </div>
-  <div class="row about-desc" data-aos="fade-up">
-    <div class="col-full">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.
-      </p>
-    </div>
-  </div>
-  <div id="counter" class="row about-stats stats block-1-4 block-m-1-2 block-mob-full" data-aos="fade-up">
-    <div class="col-block stats__col ">
-      <div class="stats__count" data-count="127">0</div>
-      <h5>Awards Received</h5>
-    </div>
-    <div class="col-block stats__col">
-      <div class="stats__count" data-count="1505">0</div>
-      <h5>Cups of Coffee</h5>
-    </div>
-    <div class="col-block stats__col">
-      <div class="stats__count" data-count="109">0</div>
-      <h5>Projects Completed</h5>
-    </div>
-    <div class="col-block stats__col">
-      <div class="stats__count" data-count="102">0</div>
-      <h5>Happy Clients</h5>
-    </div>
-  </div>
-  <div class="about__line"></div>
-</section>
+<ngQuad-about [description]="aboutDescription" [companyStats]="companyStats"></ngQuad-about>
 
 <section id='services' class="s-services">
   <div class="row section-header has-bottom-sep" data-aos="fade-up">

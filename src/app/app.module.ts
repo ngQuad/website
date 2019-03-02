@@ -10,13 +10,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MapBoxComponent } from './components/map/map-box/map-box.component';
 import { LocationItemComponent } from './components/map/location-item/location-item.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TeamComponent,
     MapBoxComponent,
-    LocationItemComponent
+    LocationItemComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
