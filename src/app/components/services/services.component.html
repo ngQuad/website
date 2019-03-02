@@ -1,0 +1,21 @@
+<section id='services' class="s-services">
+  <div class="row section-header has-bottom-sep" data-aos="fade-up">
+    <div class="col-full">
+      <h3 class="subhead">What We Do</h3>
+      <h1 class="display-2">We’ve got everything you need to launch and grow your business</h1>
+    </div>
+  </div>
+  <div class="row services-list block-1-2 block-tab-full">
+    <ng-container *ngFor="let companyService of companyServices">
+      <div class="col-block service-item" data-aos="fade-up">
+        <div class="service-icon">
+          <i class="{{companyService?.icon}}"></i>
+        </div>
+        <div class="service-text">
+          <h3 class="h2">{{companyService?.title}}</h3>
+          <p>{{companyService?.description}}</p>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</section>
