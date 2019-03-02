@@ -1,0 +1,23 @@
+<section id='about' class="s-about">
+  <div class="row section-header has-bottom-sep" data-aos="fade-up">
+    <div class="col-full">
+      <h3 class="subhead subhead--dark">Hello There</h3>
+      <h1 class="display-1 display-1--light">We Are ngQuad</h1>
+    </div>
+  </div>
+  <div class="row about-desc" data-aos="fade-up">
+    <div class="col-full">
+      <p>{{description}}</p>
+    </div>
+  </div>
+  <div id="counter" class="row about-stats stats block-1-4 block-m-1-2 block-mob-full" data-aos="fade-up">
+
+    <ng-container *ngFor="let companyStat of companyStats">
+      <div class="col-block stats__col">
+        <div class="stats__count" [attr.data-count]="companyStat?.numberOf">0</div>
+        <h5>{{companyStat?.title}}</h5>
+      </div>
+    </ng-container>
+  </div>
+  <div class="about__line"></div>
+</section>

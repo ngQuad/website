@@ -13,6 +13,8 @@ import { socials } from './helpers/social.helper';
 
 import { defaultMapCenter, defaultMapZoom, iGeoJson } from './helpers/locations.helper';
 import { AppService } from './services/app.service';
+import { ICompanyStats } from './interfaces/companystats.interface';
+import { aboutDescription, companyStats } from './helpers/companystats.helper';
 
 
 @Component({
@@ -28,6 +30,8 @@ export class AppComponent implements OnInit, AfterViewInit {
   map: any;
   socials: ISocial[] = socials;
   teamMembers: ITeamMember[] = teamMembers;
+  companyStats: ICompanyStats[] = companyStats;
+  aboutDescription: string = aboutDescription;
 
   constructor(private readonly appService: AppService) {
   }
