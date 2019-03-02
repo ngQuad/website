@@ -15,6 +15,8 @@ import { defaultMapCenter, defaultMapZoom, iGeoJson } from './helpers/locations.
 import { AppService } from './services/app.service';
 import { ICompanyStats } from './interfaces/companystats.interface';
 import { aboutDescription, companyStats } from './helpers/companystats.helper';
+import { ICompanyService } from './interfaces/services.interface';
+import { companyServices } from './helpers/services.helper';
 
 
 @Component({
@@ -32,6 +34,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   teamMembers: ITeamMember[] = teamMembers;
   companyStats: ICompanyStats[] = companyStats;
   aboutDescription: string = aboutDescription;
+  companyServices: ICompanyService[] = companyServices;
 
   constructor(private readonly appService: AppService) {
   }

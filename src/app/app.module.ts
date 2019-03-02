@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MapBoxComponent } from './components/map/map-box/map-box.component';
 import { LocationItemComponent } from './components/map/location-item/location-item.component';
 import { AboutComponent } from './components/about/about.component';
+import { ServicesComponent } from './components/services/services.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AboutComponent } from './components/about/about.component';
     TeamComponent,
     MapBoxComponent,
     LocationItemComponent,
-    AboutComponent
+    AboutComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,
