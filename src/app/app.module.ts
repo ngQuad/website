@@ -16,6 +16,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { LocationsComponent } from './components/locations/locations.component';
 import { TechnologiesComponent } from './components/technologies/technologies.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { TechnologiesComponent } from './components/technologies/technologies.co
     HeaderComponent,
     HomeComponent,
     LocationsComponent,
-    TechnologiesComponent
+    TechnologiesComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
