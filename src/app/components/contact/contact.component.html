@@ -1,0 +1,97 @@
+<section id="contact" class="s-contact">
+  <div class="overlay"></div>
+  <div class="contact__line"></div>
+  <div class="row section-header" data-aos="fade-up">
+    <div class="col-full">
+      <h3 class="subhead">Contact Us</h3>
+      <h1 class="display-2 display-2--light">Reach out for a new project or just say hello</h1>
+    </div>
+  </div>
+  <div class="row contact-content" data-aos="fade-up">
+    <div class="contact-primary">
+      <h3 class="h6">Send Us A Message</h3>
+      <form #contactForm="ngForm" id="contactForm">
+        <div class="form-field form-group">
+          <label *ngIf="contactInput.value.length <= 2 && contactForm.controls['name']?.touched" id="contactName-error"
+                 class="error" for="contactName">This field is required, need more than 2 letters.</label>
+          <input #contactInput name="name" type="text" id="contactName" placeholder="Your Name" value="" minlength="2"
+                 required aria-required="true" class="full-width form-control" ngModel>
+        </div>
+        <div class="form-field form-group">
+          <label *ngIf="!contactForm.controls['email']?.valid && contactForm.controls['email']?.touched"
+                 id="contactEmail-error" class="error" for="contactEmail">Enter valid email.</label>
+          <input name="email" [pattern]="emailValidator" type="email" id="contactEmail" placeholder="Your Email"
+                 value="" required aria-required="true" class="full-width form-control" ngModel>
+        </div>
+        <div class="form-field form-group">
+
+          <label *ngIf="!subject.value.length && contactForm.controls['subject']?.touched" id="contactSubject-error"
+                 class="error" for="contactSubject">This field is required.</label>
+          <input #subject name="subject" type="text" id="contactSubject" placeholder="Subject" value=""
+                 class="full-width form-control" ngModel>
+        </div>
+        <div class="form-field form-group">
+          <label *ngIf="body.value.length <= 10 && contactForm.controls['body']?.touched" id="contactMessage-error"
+                 class="error" for="contactMessage">Enter minimum of 10 letters.</label>
+          <textarea #body name="body" id="contactMessage" placeholder="Your Message" rows="10" cols="50"
+                    required="" aria-required="true" class="full-width form-control" ngModel></textarea>
+        </div>
+        <div class="form-field">
+          <button [disabled]="!contactForm.valid" [ngClass]="{ 'disabled': !contactForm.valid}"
+                  (click)="onSendEmail(contactForm.value)"
+                  class="full-width btn--primary">
+            Submit
+          </button>
+          <div class="submit-loader">
+            <div class="text-loader">Sending...</div>
+            <div class="s-loader">
+              <div class="bounce1"></div>
+              <div class="bounce2"></div>
+              <div class="bounce3"></div>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="message-warning">
+        Something went wrong. Please try again.
+      </div>
+
+      <div class="message-success">
+        Your message was sent, thank you!<br>
+      </div>
+    </div>
+    <div class="contact-secondary">
+      <div class="contact-info">
+        <h3 class="h6 hide-on-fullwidth">Contact Info</h3>
+        <div class="cinfo">
+          <h5>Where to Find Us</h5>
+          <p>
+            Pale<br>
+            Republic of Srpska, Bosnia and Herzegovina<br>
+            71420 BIH
+          </p>
+        </div>
+        <div class="cinfo">
+          <h5>Email Us At</h5>
+          <p>
+            <a href="mailto:ngquad@yandex.com?Subject=Hello" target="_top"
+               class="__cf_email__">ngquad@yandex.com</a><br>
+            <a href="mailto:hellongquad@gmail.com?Subject=Hello" target="_top" class="__cf_email__">hellongquad@gmail.com</a><br>
+          </p>
+        </div>
+        <div class="cinfo">
+          <h5>Call Us At</h5>
+          <p>
+            Phone: (+387) 66 140 150<br>
+            Mobile: (+387) 66 140 150<br>
+          </p>
+        </div>
+        <ul class="contact-social">
+          <li *ngFor="let social of socials">
+            <a [href]="social?.url" target="_blank"><i class="fa fa-{{social?.icon}}" aria-hidden="true"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
