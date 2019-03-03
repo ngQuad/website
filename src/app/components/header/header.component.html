@@ -1,0 +1,33 @@
+<header class="s-header">
+  <div class="header-logo">
+    <a class="site-logo">
+      <img src="../assets/images/webngquad.png" alt="Homepage">
+    </a>
+  </div>
+  <nav class="header-nav">
+    <a href="#home" class="header-nav__close" title="close"><span>Close</span></a>
+    <div class="header-nav__content">
+      <h3>Navigation</h3>
+      <ul class="header-nav__list">
+        <li class="current"><a class="smoothscroll" href="#home" title="home">Home</a></li>
+        <li><a class="smoothscroll" href="#about" title="about">About</a></li>
+        <li><a class="smoothscroll" href="#services" title="services">Services</a></li>
+        <li><a class="smoothscroll" href="#works" title="works">Works</a></li>
+        <li><a class="smoothscroll" href="#team" title="team">Team</a></li>
+        <li><a class="smoothscroll" href="#locations" title="locations">Locations</a></li>
+        <li><a class="smoothscroll" href="#clients" title="clients">Clients</a></li>
+        <li><a class="smoothscroll" href="#contact" title="contact">Contact</a></li>
+      </ul>
+      <p>You can find us on social and professional networks bellow. Send us a message.</p>
+      <ul class="header-nav__social">
+        <li *ngFor="let social of socials">
+          <a [href]="social?.url" target="_blank"><i class="fa fa-{{social?.icon}}" aria-hidden="true"></i></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <a class="header-menu-toggle" href="#menu">
+    <span class="header-menu-text">Menu</span>
+    <span class="header-menu-icon"></span>
+  </a>
+</header>

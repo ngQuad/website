@@ -12,6 +12,7 @@ import { MapBoxComponent } from './components/map/map-box/map-box.component';
 import { LocationItemComponent } from './components/map/location-item/location-item.component';
 import { AboutComponent } from './components/about/about.component';
 import { ServicesComponent } from './components/services/services.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ServicesComponent } from './components/services/services.component';
     MapBoxComponent,
     LocationItemComponent,
     AboutComponent,
-    ServicesComponent
+    ServicesComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
