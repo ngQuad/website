@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
-import { IGeoJson } from '../../../interfaces/location.interface';
+import { IGeoJson } from '../../../../interfaces/location.interface';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,

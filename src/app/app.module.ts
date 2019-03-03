@@ -8,12 +8,13 @@ import { AppService } from './services/app.service';
 import { HttpService } from './services/http.service';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { MapBoxComponent } from './components/map/map-box/map-box.component';
-import { LocationItemComponent } from './components/map/location-item/location-item.component';
+import { MapBoxComponent } from './components/locations/map/map-box/map-box.component';
+import { LocationItemComponent } from './components/locations/map/location-item/location-item.component';
 import { AboutComponent } from './components/about/about.component';
 import { ServicesComponent } from './components/services/services.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
+import { LocationsComponent } from './components/locations/locations.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HomeComponent } from './components/home/home.component';
     AboutComponent,
     ServicesComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    LocationsComponent
   ],
   imports: [
     BrowserModule,
