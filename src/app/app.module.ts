@@ -15,6 +15,7 @@ import { ServicesComponent } from './components/services/services.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { LocationsComponent } from './components/locations/locations.component';
+import { TechnologiesComponent } from './components/technologies/technologies.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LocationsComponent } from './components/locations/locations.component';
     ServicesComponent,
     HeaderComponent,
     HomeComponent,
-    LocationsComponent
+    LocationsComponent,
+    TechnologiesComponent
   ],
   imports: [
     BrowserModule,
