@@ -18,6 +18,7 @@ import { LocationsComponent } from './components/locations/locations.component';
 import { TechnologiesComponent } from './components/technologies/technologies.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { WorksComponent } from './components/works/works.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { FooterComponent } from './components/footer/footer.component';
     LocationsComponent,
     TechnologiesComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    WorksComponent
   ],
   imports: [
     BrowserModule,
