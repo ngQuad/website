@@ -1,45 +1,6 @@
 <ngQuad-header [socials]="socials"></ngQuad-header>
 
-<section id="home" class="s-home target-section" data-parallax="scroll"
-         data-image-src="../assets/images/backgrounds/background-2.jpg"
-         data-natural-width=3000 data-natural-height=2000 data-position-y=center>
-  <div class="overlay"></div>
-  <div class="shadow-overlay"></div>
-  <div class="home-content">
-    <div class="row home-content__main">
-      <h3>Welcome to ngQuad</h3>
-      <h1>
-        We are a creative group <br>
-        of people who design <br>
-        influential brands and <br>
-        digital experiences.
-      </h1>
-      <div class="home-content__buttons">
-        <a href="#contact" class="smoothscroll btn btn--stroke">
-          Start a Project
-        </a>
-        <a href="#about" class="smoothscroll btn btn--stroke">
-          More About Us
-        </a>
-      </div>
-    </div>
-    <div class="home-content__scroll">
-      <a href="#about" class="scroll-link smoothscroll">
-        <span>Scroll Down</span>
-      </a>
-    </div>
-    <div class="home-content__line"></div>
-  </div>
-  <ul class="home-social">
-    <li *ngFor="let social of socials">
-      <a [href]="social?.url" target="_blank">
-        <i class="fa fa-{{social?.icon}}" aria-hidden="true"></i>
-        <span>{{social?.title}}</span>
-      </a>
-    </li>
-  </ul>
-
-</section>
+<ngQuad-home [socials]="socials"></ngQuad-home>
 
 <ngQuad-about [description]="aboutDescription" [companyStats]="companyStats"></ngQuad-about>
 
@@ -257,27 +218,42 @@
   <div class="row clients-outer" data-aos="fade-up">
     <div class="col-full">
       <div class="clients">
-        <a href="https://angular.io" target="_blank" title="Angular" class="clients__slide"><img src="../assets/images/stack/angular.png"/></a>
-        <a href="https://www.android.com" target="_blank" title="Android" class="clients__slide"><img src="../assets/images/stack/android.png"/></a>
-        <a href="https://developer.apple.com/ios/" target="_blank" title="Ios" class="clients__slide"><img src="../assets/images/stack/apple.png"/></a>
-        <a href="https://www.nativescript.org" target="_blank" title="Nativescript" class="clients__slide"><img src="../assets/images/stack/nativescript.png"/></a>
-        <a href="https://www.electronjs.org" target="_blank" title="Electron" class="clients__slide"><img src="../assets/images/stack/electron.png"/></a>
-        <a href="https://www.slack.com" target="_blank" title="Slack" class="clients__slide"><img src="../assets/images/stack/slack.png"/></a>
-        <a href="https://www.electronjs.org" target="_blank" title="Trello" class="clients__slide"><img src="../assets/images/stack/trello.png"/></a>
+        <a href="https://angular.io" target="_blank" title="Angular" class="clients__slide"><img
+          src="../assets/images/stack/angular.png"/></a>
+        <a href="https://www.android.com" target="_blank" title="Android" class="clients__slide"><img
+          src="../assets/images/stack/android.png"/></a>
+        <a href="https://developer.apple.com/ios/" target="_blank" title="Ios" class="clients__slide"><img
+          src="../assets/images/stack/apple.png"/></a>
+        <a href="https://www.nativescript.org" target="_blank" title="Nativescript" class="clients__slide"><img
+          src="../assets/images/stack/nativescript.png"/></a>
+        <a href="https://www.electronjs.org" target="_blank" title="Electron" class="clients__slide"><img
+          src="../assets/images/stack/electron.png"/></a>
+        <a href="https://www.slack.com" target="_blank" title="Slack" class="clients__slide"><img
+          src="../assets/images/stack/slack.png"/></a>
+        <a href="https://www.electronjs.org" target="_blank" title="Trello" class="clients__slide"><img
+          src="../assets/images/stack/trello.png"/></a>
       </div>
     </div>
   </div>
   <div class="row clients-outer" data-aos="fade-up">
     <div class="col-full">
       <div class="clients">
-        <a href="https://www.nodejs.org" target="_blank" title="Nodejs" class="clients__slide"><img src="../assets/images/stack/nodejs.png"/></a>
-        <a href="https://www.nestjs.com" target="_blank" title="Nestjs" class="clients__slide"><img src="../assets/images/stack/nestjs.png"/></a>
-        <a href="https://serverless.com" target="_blank" title="Serverless" class="clients__slide"><img src="../assets/images/stack/serverless.png"/></a>
-        <a href="https://git-scm.com" target="_blank" title="Git" class="clients__slide"><img src="../assets/images/stack/git.png"/></a>
-        <a href="https://github.com" target="_blank" title="Github" class="clients__slide"><img src="../assets/images/stack/github.png"/></a>
-        <a href="https://bitbucket.com" target="_blank" title="Bitbucket" class="clients__slide"><img src="../assets/images/stack/bitbucket.png"/></a>
-        <a href="https://gitlab.com" target="_blank" title="Gitlab" class="clients__slide"><img src="../assets/images/stack/gitlab.png"/></a>
-        <a href="https://linux.org" target="_blank" title="Linux" class="clients__slide"><img src="../assets/images/stack/linux.png"/></a>
+        <a href="https://www.nodejs.org" target="_blank" title="Nodejs" class="clients__slide"><img
+          src="../assets/images/stack/nodejs.png"/></a>
+        <a href="https://www.nestjs.com" target="_blank" title="Nestjs" class="clients__slide"><img
+          src="../assets/images/stack/nestjs.png"/></a>
+        <a href="https://serverless.com" target="_blank" title="Serverless" class="clients__slide"><img
+          src="../assets/images/stack/serverless.png"/></a>
+        <a href="https://git-scm.com" target="_blank" title="Git" class="clients__slide"><img
+          src="../assets/images/stack/git.png"/></a>
+        <a href="https://github.com" target="_blank" title="Github" class="clients__slide"><img
+          src="../assets/images/stack/github.png"/></a>
+        <a href="https://bitbucket.com" target="_blank" title="Bitbucket" class="clients__slide"><img
+          src="../assets/images/stack/bitbucket.png"/></a>
+        <a href="https://gitlab.com" target="_blank" title="Gitlab" class="clients__slide"><img
+          src="../assets/images/stack/gitlab.png"/></a>
+        <a href="https://linux.org" target="_blank" title="Linux" class="clients__slide"><img
+          src="../assets/images/stack/linux.png"/></a>
       </div>
     </div>
   </div>
@@ -334,28 +310,33 @@
       <h3 class="h6">Send Us A Message</h3>
       <form #contactForm="ngForm" id="contactForm">
         <div class="form-field form-group">
-          <label *ngIf="contactInput.value.length <= 2 && contactForm.controls['name']?.touched" id="contactName-error" class="error" for="contactName">This field is required, need more than 2 letters.</label>
+          <label *ngIf="contactInput.value.length <= 2 && contactForm.controls['name']?.touched" id="contactName-error"
+                 class="error" for="contactName">This field is required, need more than 2 letters.</label>
           <input #contactInput name="name" type="text" id="contactName" placeholder="Your Name" value="" minlength="2"
                  required aria-required="true" class="full-width form-control" ngModel>
         </div>
         <div class="form-field form-group">
-          <label *ngIf="!contactForm.controls['email']?.valid && contactForm.controls['email']?.touched" id="contactEmail-error" class="error" for="contactEmail">Enter valid email.</label>
+          <label *ngIf="!contactForm.controls['email']?.valid && contactForm.controls['email']?.touched"
+                 id="contactEmail-error" class="error" for="contactEmail">Enter valid email.</label>
           <input name="email" [pattern]="emailValidator" type="email" id="contactEmail" placeholder="Your Email"
                  value="" required aria-required="true" class="full-width form-control" ngModel>
         </div>
         <div class="form-field form-group">
 
-          <label *ngIf="!subject.value.length && contactForm.controls['subject']?.touched" id="contactSubject-error" class="error" for="contactSubject">This field is required.</label>
+          <label *ngIf="!subject.value.length && contactForm.controls['subject']?.touched" id="contactSubject-error"
+                 class="error" for="contactSubject">This field is required.</label>
           <input #subject name="subject" type="text" id="contactSubject" placeholder="Subject" value=""
                  class="full-width form-control" ngModel>
         </div>
         <div class="form-field form-group">
-          <label *ngIf="body.value.length <= 10 && contactForm.controls['body']?.touched" id="contactMessage-error" class="error" for="contactMessage">Enter minimum of 10 letters.</label>
+          <label *ngIf="body.value.length <= 10 && contactForm.controls['body']?.touched" id="contactMessage-error"
+                 class="error" for="contactMessage">Enter minimum of 10 letters.</label>
           <textarea #body name="body" id="contactMessage" placeholder="Your Message" rows="10" cols="50"
-                      required="" aria-required="true" class="full-width form-control" ngModel></textarea>
+                    required="" aria-required="true" class="full-width form-control" ngModel></textarea>
         </div>
         <div class="form-field">
-          <button [disabled]="!contactForm.valid" [ngClass]="{ 'disabled': !contactForm.valid}" (click)="sendEmail(contactForm.value)"
+          <button [disabled]="!contactForm.valid" [ngClass]="{ 'disabled': !contactForm.valid}"
+                  (click)="sendEmail(contactForm.value)"
                   class="full-width btn--primary">
             Submit
           </button>

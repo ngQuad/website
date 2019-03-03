@@ -1,0 +1,40 @@
+<section id="home" class="s-home target-section" data-parallax="scroll"
+         data-image-src="../assets/images/backgrounds/background-2.jpg"
+         data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+  <div class="overlay"></div>
+  <div class="shadow-overlay"></div>
+  <div class="home-content">
+    <div class="row home-content__main">
+      <h3>Welcome to ngQuad</h3>
+      <h1>
+        We are a creative group <br>
+        of people who design <br>
+        influential brands and <br>
+        digital experiences.
+      </h1>
+      <div class="home-content__buttons">
+        <a href="#contact" class="smoothscroll btn btn--stroke">
+          Start a Project
+        </a>
+        <a href="#about" class="smoothscroll btn btn--stroke">
+          More About Us
+        </a>
+      </div>
+    </div>
+    <div class="home-content__scroll">
+      <a href="#about" class="scroll-link smoothscroll">
+        <span>Scroll Down</span>
+      </a>
+    </div>
+    <div class="home-content__line"></div>
+  </div>
+  <ul class="home-social">
+    <li *ngFor="let social of socials">
+      <a [href]="social?.url" target="_blank">
+        <i class="fa fa-{{social?.icon}}" aria-hidden="true"></i>
+        <span>{{social?.title}}</span>
+      </a>
+    </li>
+  </ul>
+
+</section>
