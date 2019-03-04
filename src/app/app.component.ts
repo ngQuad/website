@@ -7,7 +7,6 @@ import { ITeamMember } from './interfaces/team.interface';
 import { ISocial } from './interfaces/social.interface';
 
 import { config } from './config/config';
-import { emailValidator } from './helpers/email.helper';
 import { teamMembers } from './helpers/team.helper';
 import { socials } from './helpers/social.helper';
 
@@ -27,7 +26,6 @@ import { companyServices } from './helpers/services.helper';
 export class AppComponent implements OnInit, AfterViewInit {
 
   currentYear: number;
-  emailValidator = emailValidator;
   iGeoJson: IGeoJson = iGeoJson;
   map: any;
   socials: ISocial[] = socials;
@@ -237,7 +235,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     AOS.init({ offset: 200, duration: 600, easing: 'ease-in-sine', delay: 300, once: true, disable: 'mobile' });
   };
 
-  sendEmail(contactForm: IEmail) {
+  onSendEmail(contactForm: IEmail) {
 
     const sLoader = $('.submit-loader');
     const messageWarning = $('.message-warning');

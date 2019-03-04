@@ -19,6 +19,7 @@ import { TechnologiesComponent } from './components/technologies/technologies.co
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { WorksComponent } from './components/works/works.component';
+import { AppHomeComponent } from './components/app-home/app-home.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { WorksComponent } from './components/works/works.component';
     TechnologiesComponent,
     ContactComponent,
     FooterComponent,
-    WorksComponent
+    WorksComponent,
+    AppHomeComponent
   ],
   imports: [
     BrowserModule,
