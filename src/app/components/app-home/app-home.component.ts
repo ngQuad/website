@@ -4,6 +4,7 @@ import { ICompanyStats } from '../../interfaces/companystats.interface';
 import { ICompanyService } from '../../interfaces/services.interface';
 import { ITeamMember } from '../../interfaces/team.interface';
 import { IGeoJson } from '../../interfaces/location.interface';
+import { IPortfolio } from '../../interfaces/portfolio.interface';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -19,11 +20,13 @@ export class AppHomeComponent {
   @Input() companyServices: ICompanyService[];
   @Input() teamMembers: ITeamMember[];
   @Input() iGeoJson: IGeoJson;
+  @Input() portfolios: IPortfolio[];
   @Input() currentYear: string;
 
   @Output() mapReset = new EventEmitter<boolean>();
   @Output() itemLocationClick = new EventEmitter<object>();
   @Output() sendEmail = new EventEmitter<any>();
+  @Output() clPhotoSwipe = new EventEmitter<any>();
 
   onMapReset() {
     this.mapReset.emit();
@@ -35,5 +38,9 @@ export class AppHomeComponent {
 
   onSendEmail(data) {
     this.sendEmail.emit(data);
+  }
+
+  onClPhotoSwipe(data) {
+    this.clPhotoSwipe.emit(data);
   }
 }

@@ -6,6 +6,9 @@
   [teamMembers]="teamMembers"
   [iGeoJson]="iGeoJson"
   [currentYear]="currentYear"
+  [portfolios]="portfolios"
   (mapReset)="onMapReset()"
-  (sendEmail)="onSendEmail($event)">
+  (sendEmail)="onSendEmail($event)"
+  (itemLocationClick)="onItemLocationClicked($event)"
+  (clPhotoSwipe)="clPhotoswipe($event)">
 </ngQuad-app-home>

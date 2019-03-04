@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
+import { IPortfolio } from '../../interfaces/portfolio.interface';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -8,7 +9,21 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 })
 export class WorksComponent {
 
-  goTo(data){
+  @Input() portfolios: IPortfolio[];
+
+  @Output() clPhotoSwipe = new EventEmitter<any>();
+
+  goTo(data) {
+
+    if (!data) {
+      return;
+    }
+
     window.open(data, "_blank");
+  }
+
+  clPhotoswipe(index: number, portfolios: IPortfolio[]) {
+
+    this.clPhotoSwipe.emit({ index, portfolios });
   }
 }
