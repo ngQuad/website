@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { ISocial } from '../../interfaces/social.interface';
+import { emailValidator } from '../../helpers/email.helper';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -8,6 +9,8 @@ import { ISocial } from '../../interfaces/social.interface';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
+
+  emailValidator = emailValidator;
 
   @Input() socials: ISocial[];
 

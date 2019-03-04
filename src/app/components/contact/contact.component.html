@@ -37,9 +37,8 @@
                     required="" aria-required="true" class="full-width form-control" ngModel></textarea>
         </div>
         <div class="form-field">
-          <button [disabled]="!contactForm.valid" [ngClass]="{ 'disabled': !contactForm.valid}"
-                  (click)="onSendEmail(contactForm.value)"
-                  class="full-width btn--primary">
+          test: {{!contactForm?.dirty && !contactForm.valid}}
+          <button [disabled]="!contactForm.valid" [ngClass]="{ 'disabled': !contactForm?.valid}" (click)="onSendEmail(contactForm?.value)" class="full-width btn--primary">
             Submit
           </button>
           <div class="submit-loader">
