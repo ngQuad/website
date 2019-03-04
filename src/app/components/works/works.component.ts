@@ -14,6 +14,11 @@ export class WorksComponent {
   @Output() clPhotoSwipe = new EventEmitter<any>();
 
   goTo(data) {
+
+    if (!data) {
+      return;
+    }
+
     window.open(data, "_blank");
   }
 
