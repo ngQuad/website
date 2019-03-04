@@ -26,6 +26,7 @@ export class AppHomeComponent {
   @Output() mapReset = new EventEmitter<boolean>();
   @Output() itemLocationClick = new EventEmitter<object>();
   @Output() sendEmail = new EventEmitter<any>();
+  @Output() clPhotoSwipe = new EventEmitter<any>();
 
   onMapReset() {
     this.mapReset.emit();
@@ -37,5 +38,9 @@ export class AppHomeComponent {
 
   onSendEmail(data) {
     this.sendEmail.emit(data);
+  }
+
+  onClPhotoSwipe(data) {
+    this.clPhotoSwipe.emit(data);
   }
 }

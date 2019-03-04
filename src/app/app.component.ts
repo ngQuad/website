@@ -207,31 +207,32 @@ export class AppComponent implements OnInit, AfterViewInit {
     });
   };
 
-  clPhotoswipe() {
+  clPhotoswipe(data: any) {
+
+    if (!data) {
+      return;
+    }
     // @ts-ignore
-    const items = [], $pswp = $('.pswp')[0], $folioItems = $('.item-folio');
-    $folioItems.each(function (i) {
-      const $folio = $(this), $thumbLink = $folio.find('.thumb-link'), $title = $folio.find('.item-folio__title'),
-        $caption = $folio.find('.item-folio__caption'), $titleText = '<h4>' + $.trim($title.html()) + '</h4>',
-        $captionText = $.trim($caption.html()), $href = $thumbLink.attr('href'),
-        $size = $thumbLink.data('size').split('x'), $width = $size[0], $height = $size[1];
-      const item = { src: $href, w: $width, h: $height };
-      if ($caption.length > 0) {
-        // @ts-ignore
-        item.title = $.trim($titleText + $captionText);
-      }
-      items.push(item);
+    const $pswp = $('.pswp')[0];
+    const images = data.portfolios.map(portfolio => {
+      return {
+        src: '../assets/images/portfolio/' + portfolio.image,
+        width: 800,
+        height: 800,
+        title: portfolio.title + portfolio.description,
+        initialPosition: { x: 0, y: 0 },
+        bounds: {
+          center: { x: 0, y: 0 },
+          max: { x: 0, y: 0 },
+          min: { x: 0, y: 0 }
+        }
+      };
     });
-    $folioItems.each(function (i) {
-      $(this).on('click', function (e) {
-        e.preventDefault();
-        const options = { index: i, showHideOpacity: true };
-        // @ts-ignore
-        const lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
-        lightBox.init();
-      });
-    });
-  };
+    const options = { index: data.index, showHideOpacity: true };
+    // @ts-ignore
+    const lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, images, options);
+    lightBox.init();
+  }
 
   clAOS() {
     // @ts-ignore

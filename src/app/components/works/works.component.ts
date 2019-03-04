@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { IPortfolio } from '../../interfaces/portfolio.interface';
 
 @Component({
@@ -11,7 +11,14 @@ export class WorksComponent {
 
   @Input() portfolios: IPortfolio[];
 
-  goTo(data){
+  @Output() clPhotoSwipe = new EventEmitter<any>();
+
+  goTo(data) {
     window.open(data, "_blank");
+  }
+
+  clPhotoswipe(index: number, portfolios: IPortfolio[]) {
+
+    this.clPhotoSwipe.emit({ index, portfolios });
   }
 }
