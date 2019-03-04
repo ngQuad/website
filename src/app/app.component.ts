@@ -16,6 +16,8 @@ import { ICompanyStats } from './interfaces/companystats.interface';
 import { aboutDescription, companyStats } from './helpers/companystats.helper';
 import { ICompanyService } from './interfaces/services.interface';
 import { companyServices } from './helpers/services.helper';
+import { IPortfolio } from './interfaces/portfolio.interface';
+import { portfolios } from './helpers/portfolio.helper';
 
 
 @Component({
@@ -33,6 +35,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   companyStats: ICompanyStats[] = companyStats;
   aboutDescription: string = aboutDescription;
   companyServices: ICompanyService[] = companyServices;
+  portfolios: IPortfolio[] = portfolios;
 
   constructor(private readonly appService: AppService) {
   }

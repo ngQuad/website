@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { IPortfolio } from '../../interfaces/portfolio.interface';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -7,6 +8,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrls: ['./works.component.css']
 })
 export class WorksComponent {
+
+  @Input() portfolios: IPortfolio[];
 
   goTo(data){
     window.open(data, "_blank");
