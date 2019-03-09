@@ -42,6 +42,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
 
+    this.wakeUpServer();
     this.preLoader(window);
     this.onMenuScrollDown(window);
     this.offCanvas();
@@ -56,6 +57,15 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.initMap();
+  }
+
+  wakeUpServer() {
+
+    this.appService.wakeUpServer();
+
+    setInterval(() => {
+      this.appService.wakeUpServer();
+    }, 300000);
   }
 
   onMenuScrollDown(window) {
