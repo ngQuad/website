@@ -2,7 +2,7 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 import * as mapboxgl from 'mapbox-gl';
 
 import { IGeoJson } from './interfaces/location.interface';
-import { IEmail } from './interfaces/email.interface';
+import { IEmail, isValid } from './interfaces/email.interface';
 import { ITeamMember } from './interfaces/team.interface';
 import { ISocial } from './interfaces/social.interface';
 
@@ -239,6 +239,10 @@ export class AppComponent implements OnInit, AfterViewInit {
   };
 
   onSendEmail(contactForm: IEmail) {
+
+    if (isValid(contactForm)) {
+      return;
+    }
 
     const sLoader = $('.submit-loader');
     const messageWarning = $('.message-warning');

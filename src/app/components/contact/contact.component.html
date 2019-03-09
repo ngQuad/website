@@ -14,33 +14,26 @@
         <div class="form-field form-group">
           <label *ngIf="contactInput.value.length <= 2 && contactForm.controls['name']?.touched" id="contactName-error"
                  class="error" for="contactName">This field is required, need more than 2 letters.</label>
-          <input #contactInput name="name" type="text" id="contactName" placeholder="Your Name" value="" minlength="2"
-                 required aria-required="true" class="full-width form-control" ngModel>
+          <input #contactInput name="name" type="text" id="contactName" placeholder="Your Name" value="" minlength="2" aria-required="true" class="full-width form-control" ngModel required>
         </div>
         <div class="form-field form-group">
           <label *ngIf="!contactForm.controls['email']?.valid && contactForm.controls['email']?.touched"
                  id="contactEmail-error" class="error" for="contactEmail">Enter valid email.</label>
-          <input name="email" [pattern]="emailValidator" type="email" id="contactEmail" placeholder="Your Email"
-                 value="" required aria-required="true" class="full-width form-control" ngModel>
+          <input name="email" [pattern]="emailValidator" type="email" id="contactEmail" placeholder="Your Email" value="" aria-required="true" class="full-width form-control" ngModel required>
         </div>
         <div class="form-field form-group">
 
           <label *ngIf="!subject.value.length && contactForm.controls['subject']?.touched" id="contactSubject-error"
                  class="error" for="contactSubject">This field is required.</label>
-          <input #subject name="subject" type="text" id="contactSubject" placeholder="Subject" value=""
-                 class="full-width form-control" ngModel>
+          <input #subject name="subject" type="text" id="contactSubject" placeholder="Subject" value="" class="full-width form-control" ngModel required>
         </div>
         <div class="form-field form-group">
           <label *ngIf="body.value.length <= 10 && contactForm.controls['body']?.touched" id="contactMessage-error"
                  class="error" for="contactMessage">Enter minimum of 10 letters.</label>
-          <textarea #body name="body" id="contactMessage" placeholder="Your Message" rows="10" cols="50"
-                    required="" aria-required="true" class="full-width form-control" ngModel></textarea>
+          <textarea #body name="body" id="contactMessage" placeholder="Your Message" rows="10" cols="50" aria-required="true" class="full-width form-control" ngModel required></textarea>
         </div>
         <div class="form-field">
-          test: {{!contactForm?.dirty && !contactForm.valid}}
-          <button [disabled]="!contactForm.valid" [ngClass]="{ 'disabled': !contactForm?.valid}" (click)="onSendEmail(contactForm?.value)" class="full-width btn--primary">
-            Submit
-          </button>
+          <button [disabled]="!contactForm.valid" [ngClass]="{ 'disabled': !contactForm.dirty || !contactForm.valid}" (click)="onSendEmail(contactForm?.value)" class="full-width btn--primary">Submit</button>
           <div class="submit-loader">
             <div class="text-loader">Sending...</div>
             <div class="s-loader">

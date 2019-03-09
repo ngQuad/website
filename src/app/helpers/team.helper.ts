@@ -1,10 +1,10 @@
 export const teamMembers = [
   {
     name: 'Miroslav',
-    intro: 'Hello there I am miki.',
+    intro: 'Passionate software engineer.',
     role: 'Team leader',
     image: 'miki',
-    description: 'Working on multiple projects since 2013Working on multiple projects since 2013Working on multiple projects since 2013',
+    description: 'Started working as freelancer in 2013, now working at HiveCPQ as Frontend developer. Always looking for great ideas and projects to keep me alive and to learn new stuff.',
     socials: [
       {
         url: 'https://www.facebook.com/miroslavmakismovic',
@@ -41,7 +41,7 @@ export const teamMembers = [
     ]
   },
   {
-    name: 'Miroslav',
+    name: 'Aki',
     intro: 'Full stack developer',
     role: 'SOmething funny',
     image: 'miki',
@@ -86,7 +86,7 @@ export const teamMembers = [
     ]
   },
   {
-    name: 'Miroslav',
+    name: 'Milan',
     intro: 'Full stack developer',
     role: 'SOmething funny',
     image: 'miki',
