@@ -48,7 +48,6 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.clStatCount(window);
     this.clSlickSlider();
     this.clSmoothScroll();
-    this.clPhotoswipe();
     this.clAlertBoxes();
     this.clAOS();
 
