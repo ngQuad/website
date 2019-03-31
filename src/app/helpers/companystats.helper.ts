@@ -15,7 +15,7 @@ export const companyStats: ICompanyStats[] = [
   },
   {
     title: 'Happy Clients',
-    numberOf: 5000
+    numberOf: 5420
   }
 ];
 

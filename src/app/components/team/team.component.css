@@ -16,6 +16,7 @@ section .section-title {
   border-radius: 5px;
   background: rgba(0, 0, 0, 0.81);
   min-height: 440px;
+
 }
 
 .card-text {
@@ -79,6 +80,7 @@ section .section-title {
   -ms-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
   min-height: 440px;
+  width: 100%;
 }
 
 .frontside,
