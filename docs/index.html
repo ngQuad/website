@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]>
+<html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <title>NgQuad</title>
+  <base href="https://ngquad.github.io/website">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="./assets/js/modernizr.js"></script>
+  <script src="./assets/js/pace.min.js"></script>
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="styles.d20679b9e0fa3c1e1d8b.css"></head>
+<body>
+
+<!-- Github Pages hack to allow SPA refresh without receiving 404. -->
+<script>
+  (function () {
+    // Retrieve the URL the user was trying to access when receiving the 404.
+    var redirect = sessionStorage.redirect;
+    // Remove the URL from sessionStorage.
+    delete sessionStorage.redirect;
+    // Check if we actually need to redirect.
+    if (redirect && redirect != location.href) {
+      // We need to redirect to the URL the user was trying to access.
+      history.replaceState(null, null, redirect);
+    }
+  })();
+</script>
+<!-- /Github Pages hack. -->
+
+<app-root></app-root>
+
+<script src="./assets/js/jquery-3.2.1.min.js"></script>
+<script src="./assets/js/plugins.js"></script>
+<script type="text/javascript" src="runtime.b57bf819d5bdce77f1c7.js"></script><script type="text/javascript" src="polyfills.1bc2060953f067e12a26.js"></script><script type="text/javascript" src="scripts.77643f4f4018e0a0a483.js"></script><script type="text/javascript" src="main.882400ade8f70f84e0aa.js"></script></body>
+</html>
