@@ -39,3 +39,9 @@
 .no-border {
   border-bottom: none;
 }
+
+@media only screen and (max-width: 600px) {
+  .title, .state {
+    font-size: 12px !important;
+  }
+}
