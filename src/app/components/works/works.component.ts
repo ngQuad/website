@@ -5,7 +5,7 @@ import { IPortfolio } from '../../interfaces/portfolio.interface';
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'ngQuad-works',
   templateUrl: './works.component.html',
-  styleUrls: ['./works.component.css']
+  styleUrls: [ './works.component.css' ]
 })
 export class WorksComponent {
 
@@ -19,7 +19,7 @@ export class WorksComponent {
       return;
     }
 
-    window.open(data, "_blank");
+    window.open(data, '_blank');
   }
 
   clPhotoswipe(index: number, portfolios: IPortfolio[]) {

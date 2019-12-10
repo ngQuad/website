@@ -225,7 +225,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     const $pswp = $('.pswp')[0];
     const images = data.portfolios.map(portfolio => {
       return {
-        src: '../assets/images/portfolio/' + portfolio.image,
+        src: './assets/images/portfolio/' + portfolio.image,
         width: 800,
         height: 800,
         title: portfolio.title + portfolio.description,
