@@ -2,6 +2,13 @@ import { IPortfolio } from '../interfaces/portfolio.interface';
 
 export const portfolios: IPortfolio[] = [
   {
+    image: 'a4.png',
+    title: 'Slack Cleaner',
+    type: 'Web app',
+    description: 'Web based app for deleting files on Slack, which is not provided by Slack itself.',
+    link: 'https://slackcleaner.herokuapp.com'
+  },
+  {
     image: 'a1.png',
     title: 'MiniMax app',
     type: 'Android apps',
@@ -21,13 +28,6 @@ export const portfolios: IPortfolio[] = [
     type: 'Mobile apps',
     description: 'Go silent in place you choose to do so.',
     link: 'https://play.google.com/store/apps/details?id=com.inc.miki.gosilent'
-  },
-  {
-    image: 'a4.png',
-    title: 'Schedules',
-    type: 'Android apps',
-    description: 'Web, desktop and mobile based app for tracking schedules for faculty.',
-    link: 'https://play.google.com/store/apps/details?id=com.inc.miki.filozofski_falutet_pale'
   },
   {
     image: 'a5.png',
