@@ -164,5 +164,34 @@ export const teamMembers = [
         icon: 'github'
       }
     ]
-  }
+  },
+  {
+    name: 'Dejan',
+    intro: 'Software engineer.',
+    role: 'Engineer',
+    image: 'dejan',
+    description: 'Working at Innovic, joined ngQuad to make some wonderful stuff with founder.',
+    socials: [
+      {
+        url: 'https://www.facebook.com/dejan.drvendzija',
+        icon: 'facebook'
+      },
+      {
+        url: 'https://www.instagram.com/ero_s_onog_svijeta',
+        icon: 'instagram'
+      },
+      {
+        url: 'https://www.linkedin.com/in/dejan-drvend%C5%BEija-81b458142/',
+        icon: 'linkedin'
+      },
+      {
+        url: 'https://medium.com/@drveni92',
+        icon: 'medium'
+      },
+      {
+        url: 'https://github.com/drveni92',
+        icon: 'github'
+      },
+    ]
+  },
 ];
